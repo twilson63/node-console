@@ -1,0 +1,15 @@
+{
+  "name": "console",
+  "version": "0.0.1",
+  "main": "./public/index.html",
+  "dependencies": {
+    "jshint": "~2.3.0"
+  },
+  "window": {
+    "toolbar": "false"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-node-webkit-builder": "~0.1.11"
+  }
+}

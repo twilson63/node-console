@@ -1,0 +1,55 @@
+<!doctype html>
+<link rel="stylesheet" href="jquery.terminal.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="jquery.terminal-min.js" type="text/javascript" charset="utf-8"></script>
+<script src="jshint.js" type="text/javascript" charset="utf-8"></script>
+<script src="underscore-min.js" type="text/javascript" charset="utf-8"></script>
+<style type="text/css">
+  .buttons {
+    float: right;
+  }
+</style>
+<body>
+  <header>
+    <div class="buttons">
+      <button>About</button>
+    </div>
+    <h1>Node Console</h1>
+  </header>
+</body>
+<script>
+  var vm = require('vm');
+  var util = require('util');
+  var gui = require('nw.gui');
+  var win = gui.Window.get();
+
+  jQuery(function($) {
+    var fullCommand = "";
+    $('body').terminal(function(command,term) {
+      if (command === 'quit') { win.close(true); } 
+      fullCommand += '\n' + command;
+      if (JSHINT(fullCommand)) {
+        term.echo(util.inspect(
+          vm.runInThisContext(fullCommand)
+        ));
+        fullCommand = "";
+      } else {
+        // if unmatched then no error.
+        var unmatched = _(JSHINT.errors).chain()
+          .pluck('code')
+          .contains('E019')
+          .value();
+        if (!unmatched) {
+          //term.echo(util.inspect(JSHINT.errors));
+          _(JSHINT.errors).each(function(err) {
+            term.echo(err.reason);
+          });
+          fullCommand = "";
+        }
+      }
+    }, {
+      prompt: '$> ',
+      greetings: ''
+    });
+  });
+</script>
