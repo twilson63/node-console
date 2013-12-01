@@ -6,7 +6,7 @@
     "jshint": "~2.3.0"
   },
   "window": {
-    "toolbar": "false"
+    "toolbar": false
   },
   "devDependencies": {
     "grunt": "~0.4.2",
