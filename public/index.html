@@ -19,11 +19,20 @@
   var util = require('util');
   var gui = require('nw.gui');
   var win = gui.Window.get();
-
+  var spawn = require('child_process').spawn;
+  
   jQuery(function($) {
     var fullCommand = "";
     $('body').terminal(function(command,term) {
       if (command === 'quit') { win.close(true); } 
+      if (/^!(ls|dir|cp|mv|mkdir|npm)/.test(command)) {
+        var cmds = command.replace(/^!/, '').split(' ');
+        var cmd = _(cmds).first();
+        var args = _(cmds).rest();
+        spawn(cmd, args)
+          .stdout.on('data', term.echo);
+        return;
+      }
       fullCommand += '\n' + command;
       if (JSHINT(fullCommand)) {
         term.echo(util.inspect(
