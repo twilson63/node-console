@@ -1,6 +1,6 @@
 {
   "name": "console",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./public/index.html",
   "dependencies": {
     "jshint": "~2.3.0"
