@@ -1,6 +1,5 @@
 var vm = require('vm');
 var util = require('util');
-var prettyjson = require('prettyjson');
 var _ = require('underscore');
 
 exports.run = function(command, term) {

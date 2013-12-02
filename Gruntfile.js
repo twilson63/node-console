@@ -15,9 +15,9 @@ module.exports = function(grunt) {
         './public/app.js',
         './public/repl.js',
         './public/bang.js',
+        './public/help.js',
         './package.json',
-        './node_modules/underscore/underscore.js',
-        './node_modules/underscore/package.json'
+        './node_modules/underscore/**/*.js'
       ]
     }
   });
