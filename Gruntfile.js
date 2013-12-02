@@ -17,7 +17,7 @@ module.exports = function(grunt) {
         './public/bang.js',
         './public/help.js',
         './package.json',
-        './node_modules/underscore/**/*.js'
+        './node_modules/underscore/**/*'
       ]
     }
   });

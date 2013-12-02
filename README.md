@@ -27,9 +27,8 @@ system environments.
 
 ## Install
 
-MAC - Download ->
-WIN - Download ->
-LINUX - Download ->
+MAC - Download -> https://s3.amazonaws.com/node-console/console-0.1.0-mac.zip
+WIN - Download -> https://s3.amazonaws.com/node-console/console-0.1.0-win.zip
 
 ## Contributing
 
