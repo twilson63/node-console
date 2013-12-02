@@ -3,7 +3,8 @@
   "version": "0.0.2",
   "main": "./public/index.html",
   "dependencies": {
-    "jshint": "~2.3.0"
+    "jshint": "~2.3.0",
+    "underscore": "~1.5.2"
   },
   "window": {
     "toolbar": false

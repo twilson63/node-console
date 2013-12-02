@@ -12,7 +12,12 @@ module.exports = function(grunt) {
         './public/jquery.terminal-min.js',
         './public/jshint.js',
         './public/underscore-min.js',
-        './package.json'
+        './public/app.js',
+        './public/repl.js',
+        './public/bang.js',
+        './package.json',
+        './node_modules/underscore/underscore.js',
+        './node_modules/underscore/package.json'
       ]
     }
   });
