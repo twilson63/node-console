@@ -2,6 +2,8 @@
 
 A nodejs repl/console app.
 
+![Node Console](node-console.png)
+
 ## Why
 
 Wouldn't be nice to have a simple consistent console application that 
