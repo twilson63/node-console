@@ -4,6 +4,7 @@ module.exports = function(grunt) {
       options: {
         version: '0.8.1',
         build_dir: 'builds',
+        linux64: true
       },
       src: [
         './public/index.html',

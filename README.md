@@ -31,6 +31,7 @@ system environments.
 
 * MAC - Download -> https://s3.amazonaws.com/node-console/console-0.1.0-mac.zip
 * WIN - Download -> https://s3.amazonaws.com/node-console/console-0.1.0-win.zip
+* linux64 - Download -> https://s3.amazonaws.com/node-console/console-0.1.0-linux63.zip
 
 ## Contributing
 
